@@ -11,7 +11,6 @@
     <!-- title -->
     <title>Application | Building Africa's Future Leaders</title>
 
-
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
 
@@ -276,7 +275,12 @@
       <!-- breadcrumb -->
       <div
         class="site-breadcrumb"
-        style="background: url(assets/img/custom-images/counter.png); background-position: top; background-size: cover; background-repeat: no-repeat;"
+        style="
+          background: url(assets/img/custom-images/counter.png);
+          background-position: top;
+          background-size: cover;
+          background-repeat: no-repeat;
+        "
       >
         <div class="container">
           <h2 class="breadcrumb-title">Application Form</h2>
@@ -295,7 +299,7 @@
             <h3>Application Form</h3>
             <form action="application-form.html#">
               <div class="row">
-                <h5 class="mb-3">Basic Information</h5>
+                <h5 class="mb-3">Your Child's Basic Information</h5>
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label>First Name</label>
@@ -318,7 +322,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                   <div class="form-group">
                     <label>Program Type</label>
                     <select class="form-select" name="program">
@@ -329,72 +333,21 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <h5 class="mt-4 mb-3">Parent's Personal Information</h5>
+                <div class="col-lg-12">
                   <div class="form-group">
-                    <label>Degree Level</label>
-                    <select class="form-select" name="degree">
-                      <option value="">Choose Degree Level</option>
-                      <option value="1">Degree Level 01</option>
-                      <option value="2">Degree Level 02</option>
-                      <option value="3">Degree Level 03</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Student Photo</label>
-                    <input
-                      type="file"
-                      class="form-control"
-                      name="photo"
-                      aria-describedby="photohelp"
-                    />
-                    <div id="photohelp" class="form-text">
-                      Your Photo Must be in Passport (PP) Size. Max Upload Size
-                      1MB.
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Upload Passport or Birth Document</label>
-                    <input
-                      type="file"
-                      class="form-control"
-                      name="document"
-                      aria-describedby="dochelp"
-                    />
-                    <div id="dochelp" class="form-text">
-                      Upload File Must Be Zip File. Max Upload Size 1MB.
-                    </div>
-                  </div>
-                </div>
-                <h5 class="mt-4 mb-3">Personal Information</h5>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Father's Name</label>
+                    <label>Parent's Name</label>
                     <input
                       type="text"
                       class="form-control"
-                      name="fathername"
-                      placeholder="Your Father's Name"
+                      name="parent-name"
+                      placeholder="Parent's Name"
                     />
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label>Mother's Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="mothername"
-                      placeholder="Your Mother's Name"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Contact Number</label>
+                    <label>Parent's Contacts</label>
                     <input
                       type="text"
                       class="form-control"
@@ -416,7 +369,7 @@
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group">
-                    <label>Present Address</label>
+                    <label>Home Address</label>
                     <input
                       type="text"
                       class="form-control"
@@ -431,17 +384,7 @@
                     <input type="date" class="form-control" name="dob" />
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>National ID Or Passport ID</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="nid"
-                      placeholder="Your ID Number"
-                    />
-                  </div>
-                </div>
+
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label>Gender</label>
@@ -453,84 +396,7 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Student Type</label>
-                    <select class="form-select" name="studenttype">
-                      <option value="">Choose Student Type</option>
-                      <option value="1">Student Type 01</option>
-                      <option value="2">Student Type 02</option>
-                      <option value="3">Student Type 03</option>
-                    </select>
-                  </div>
-                </div>
-                <h5 class="mt-4 mb-3">Academic Information</h5>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>School</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="school"
-                      placeholder="Your School"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Year Of Completion</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="yoc"
-                      placeholder="Completion Year"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Highest Qualification</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="qualification"
-                      placeholder="Your Qualification"
-                    />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Current Status</label>
-                    <select class="form-select" name="status">
-                      <option value="">Choose Current Status</option>
-                      <option value="1">Current Status 01</option>
-                      <option value="2">Current Status 02</option>
-                      <option value="3">Current Status 03</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Study Area</label>
-                    <select class="form-select" name="studyarea">
-                      <option value="">Choose Study Area</option>
-                      <option value="1">Study Area 01</option>
-                      <option value="2">Study Area 02</option>
-                      <option value="3">Study Area 03</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label>Academic Degree Level</label>
-                    <select class="form-select" name="academicdegree">
-                      <option value="">Choose Degree Level</option>
-                      <option value="1">Academic Degree Level 01</option>
-                      <option value="2">Academic Degree Level 02</option>
-                      <option value="3">Academic Degree Level 03</option>
-                    </select>
-                  </div>
-                </div>
+                
                 <div class="col-lg-12">
                   <div class="form-check">
                     <input
@@ -574,10 +440,10 @@
                   <img src="assets/img/logo/logo-light.png" alt="" />
                 </a>
                 <p class="mb-3">
-                  We help people learn and grow with practical training,
-                  creative tools, and expert support. Whether you're just
-                  starting or building something big, we're here to guide your
-                  journey.
+                  We help your kids and teens learn and grow with practical
+                  training, creative tools, and expert support. Whether they
+                  have a tech background or not , we’re here to guide your
+                  journey
                 </p>
                 <ul class="footer-contact">
                   <li>
