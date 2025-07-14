@@ -95,12 +95,6 @@
               <img src="assets/img/logo/logo.png" alt="logo" />
             </a>
             <div class="mobile-menu-right">
-              <div class="search-btn">
-                <button type="button" class="nav-right-link search-box-outer">
-                  <i class="far fa-search"></i>
-                </button>
-              </div>
-              w
               <button
                 class="navbar-toggler"
                 type="button"
@@ -117,7 +111,7 @@
             <div class="collapse navbar-collapse" id="main_nav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#">Home</a>
+                  <a class="nav-link active" href="index.html#">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="course.html">Courses</a>
@@ -248,7 +242,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link active" href="about.html">About</a>
+                  <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="how-to-apply.html">Admissions</a>
@@ -528,12 +522,15 @@
                       <input
                         type="email"
                         class="form-control"
+                        name="newsletter_email"
                         placeholder="Your Email"
+                        required
                       />
                       <button class="theme-btn" type="submit">
                         Subscribe Now <i class="far fa-paper-plane"></i>
                       </button>
                     </form>
+                    <div class="form-messege mt-3 text-center"></div>
                   </div>
                 </div>
               </div>
@@ -598,5 +595,6 @@
     <script src="assets/js/counter-up.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/newsletter-form.js"></script>
   </body>
 </html>

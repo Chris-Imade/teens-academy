@@ -14,36 +14,43 @@
             // Stop the browser from submitting the form.
             e.preventDefault();
 
-            // Serialize the form data.
-            var formData = $(form).serialize();
+            // Get form input values
+            var formData = {
+                name: $('input[name="name"]').val(),
+                email: $('input[name="email"]').val(),
+                subject: $('input[name="subject"]').val(),
+                message: $('textarea[name="message"]').val()
+            };
+
+            // Show loading message
+            $(formMessages).removeClass('success error').addClass('loading').text('Sending message...');
 
             // Submit the form using AJAX.
             $.ajax({
                 type: 'POST',
-                url: $(form).attr('action'),
-                data: formData
+                url: 'https://cyan-teens-server.onrender.com/submit-contact',
+                data: JSON.stringify(formData),
+                contentType: 'application/json'
             })
             .done(function(response) {
                 // Make sure that the formMessages div has the 'success' class.
-                $(formMessages).removeClass('error');
-                $(formMessages).addClass('success');
+                $(formMessages).removeClass('error loading').addClass('success');
 
                 // Set the message text.
-                $(formMessages).text(response);
+                $(formMessages).text('Message sent successfully!');
 
                 // Clear the form.
                 $('#contact-form input,#contact-form textarea').val('');
             })
-            .fail(function(data) {
+            .fail(function(jqXHR, textStatus, errorThrown) {
                 // Make sure that the formMessages div has the 'error' class.
-                $(formMessages).removeClass('success');
-                $(formMessages).addClass('error');
+                $(formMessages).removeClass('success loading').addClass('error');
 
                 // Set the message text.
-                if (data.responseText !== '') {
-                    $(formMessages).text(data.responseText);
+                if (jqXHR.responseText !== '') {
+                    $(formMessages).text(jqXHR.responseText);
                 } else {
-                    $(formMessages).text('Oops! An error occured and your message could not be sent.');
+                    $(formMessages).text('Oops! An error occurred and your message could not be sent.');
                 }
             });
         });
